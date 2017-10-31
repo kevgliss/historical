@@ -78,7 +78,7 @@ def create_delete_model(record):
         'accountId': record['account'],
         'eventTime': record['detail']['eventTime'],
         'BucketName': cloudwatch.filter_request_parameters('bucketName', record),
-        'Region': cloudwatch.get_region(record),
+        'region': cloudwatch.get_region(record),
         'Tags': {},
         'configuration': {}
     }

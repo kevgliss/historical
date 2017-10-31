@@ -173,8 +173,7 @@ def capture_update_records(records):
             'Tags': group.get('Tags', []),
             'arn': get_arn(group['GroupId'], group['OwnerId']),
             'OwnerId': group['OwnerId'],
-            'configuration': group,
-            'Region': cloudwatch.get_region(record)
+            'configuration': group
         })
 
         log.debug('Writing Dynamodb Record. Records: {record}'.format(record=data))
