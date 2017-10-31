@@ -28,7 +28,6 @@ class SecurityGroupModel(object):
     OwnerId = UnicodeAttribute()
     Description = UnicodeAttribute()
     Tags = ListAttribute()
-    Region = UnicodeAttribute()
 
 
 class DurableSecurityGroupModel(Model, DurableHistoricalModel, AWSHistoricalMixin, SecurityGroupModel):
