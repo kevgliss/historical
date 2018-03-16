@@ -5,14 +5,10 @@ Historical
 Allows for the tracking of AWS configuration data across accounts/regions/technologies.
 
 """
-import sys
 import os.path
+import sys
 
-import subprocess
-from distutils import log
 from setuptools import setup, find_packages
-from setuptools.command.install import install
-
 
 ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__)))
 
@@ -26,7 +22,7 @@ with open(os.path.join(ROOT, "historical", "__about__.py")) as f:
 
 
 install_requires = [
-    'cloudaux>=1.4.3',
+    'cloudaux==1.4.7',
     'boto3>=1.4.4',
     'click>=6.7',
     'pynamodb>=3.1.0',
@@ -38,7 +34,7 @@ install_requires = [
 
 tests_require = [
     'pytest==3.1.3',
-    'moto==1.1.24',
+    'moto>=1.1.24',
     'coveralls==1.1',
     'factory-boy==2.9.2'
 ]
